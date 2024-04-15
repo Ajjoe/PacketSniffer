@@ -39,7 +39,8 @@ def packet_handler(packet):
 
 
 def main():
+    print("Press enter to stop the information...")
     sniff(prn=packet_handler, filter="ether or ip or icmp or tcp", store=0)
-
+    input("Press ENTER to exit...")
 if __name__ == "__main__":
     main()  
